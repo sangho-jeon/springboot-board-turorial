@@ -14,14 +14,14 @@ import java.time.LocalDateTime;
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@EntityListeners(AuditingEntityListener.class) /* JPA에게 해당 Entity는 Auditiong 기능을 사용함을 알립니다. */
+@EntityListeners(AuditingEntityListener.class) /* auditing 기능은 자동으로 JPA에게 해당 Entity는 Auditiong 기능을 사용함을 알립니다*/
 public class Board {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(length = 10, nullable = false)
+    @Column(length = 20, nullable = false)
     private String author;
 
     @Column(length = 100, nullable = false)

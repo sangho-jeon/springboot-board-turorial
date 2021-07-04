@@ -11,12 +11,6 @@ import java.util.List;
 
 @Controller
 public class BoardController {
-//    private BoardService boardService;  //singletone 패턴을 이용하여 boardservice 생성
-//
-//    public BoardController(BoardService boardService) {
-//        this.boardService = boardService;
-//    }
-
     @Autowired // autowired를 사용해서 서비스 빈 등록
     private BoardService boardService;
 
